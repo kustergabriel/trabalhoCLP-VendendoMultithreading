@@ -7,6 +7,28 @@
     <title>Elixir</title>
 </head>
 <body>
-    <h1>Por que eu devo usar <mark>ELIXIR</mark></h1>
+    <h1>Por que você deve usar <mark>ELIXIR</mark></h1>
+    <ul>
+        <li>A linguagem Elixir foi projetada para a construção de sistemas concorrentes, distribuídos e tolerantes a falhas. Baseada na máquina virtual Erlang (BEAM), herda um modelo de concorrência centrado em processos leves, isolamento completo e comunicação por troca de mensagens. Em contraste com abordagens baseadas em threads e memória compartilhada, Elixir adota o modelo de atores, no qual cada processo atua como uma unidade independente, com estado próprio e interação exclusivamente assíncrona.</li>
+        <li>Essa arquitetura favorece a escalabilidade e a robustez, características centrais em aplicações como servidores web, sistemas de telecomunicações e pipelines de dados em tempo real.</li>
+    </ul>
+    <h2>Porque você deve utilizar <mark>ELIXIR para Programação Multithreading</mark> </h2>
+    <ul>
+        <li>Esqueça limites de 10, 100 ou 1000 threads. Com Elixir, é comum rodar milhões de processos simultaneamente em uma única máquina. Cada processo Elixir/Erlang consome apenas kilobytes de memória e é gerenciado independentemente pelo agendador da BEAM.</li>
+        <li>Elixir abraça o lema "Let it crash". Em vez de tentar prever todos os erros possíveis, você constrói sistemas resilientes com supervision trees. Quando um processo falha, um supervisor reinicia automaticamente, sem comprometer o restante do sistema.</li>
+        <li>Precisa escalar horizontalmente? Sem problemas. Elixir permite que diferentes nós da aplicação se comuniquem como se estivessem rodando localmente, sem a complexidade de sockets, filas ou APIs REST. É concorrência distribuída de verdade, de forma nativa.</li>
+    </ul>
+    <h3>Aplicações que usam <mark>ELIXIR</mark></h3>
+    <ul>
+        <li><a href="https://www.quora.com/Why-was-Erlang-used-for-the-development-of-WhatsApp-What-superiority-does-Erlang-enjoys-over-other-languages">WhatsApp: usa a VM Erlang para gerenciar bilhões de conexões simultâneas com uma equipe pequena.</a></li>
+        <li><a href="https://www.geeksforgeeks.org/system-design/how-discord-scaled-to-15-million-users-on-one-server/">Discord: usa Elixir para gerenciar gateways altamente concorrentes.</a></li>
+        <li><a href="https://paraxial.io/blog/elixir-savings">Pinterest: Como Elixir Economiza $2 Milhões por Ano</a></li>
+    </ul>
+    <h4>Simplicidade na forma de tratar concorrencia</h4>
+    <ul>
+        <li>Em vez de lidar com synchronized, thread.join() ou volatile, você escreve:</li>
+    </ul>
+    <pre><code>Task.async(fn -> do_heavy_work() end)
+        |> Task.await()</code></pre>
 </body>
 </html>
