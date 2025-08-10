@@ -31,11 +31,13 @@ img {
 
 a {
     color: #333;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover {
     color: #575757;
+    text-decoration: underline;
+
 }
 
 li {
